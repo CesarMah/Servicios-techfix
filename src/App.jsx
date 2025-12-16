@@ -188,7 +188,7 @@ export default function App() {
             {/* Logo y Nombre */}
             <div className="flex items-center space-x-2 font-bold text-xl tracking-tight">
               <Cpu className="text-blue-400" />
-              <span>Tech<span className="text-blue-400">Fix</span> Solutions</span>
+              <span>Click<span className="text-blue-400">&</span> Fix</span>
             </div>
             
             {/* Menú de Escritorio (oculto en móviles 'hidden md:flex') */}
@@ -392,11 +392,11 @@ export default function App() {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center space-x-2 font-bold text-xl text-white mb-6">
             <Cpu className="text-blue-500" />
-            <span>TechFix Solutions</span>
+            <span>Click & Fix</span>
           </div>
           <p className="mb-2">Horarios: Lunes a Viernes (Noches).</p>
           <p className="mb-6">Servicio a domicilio y soporte remoto.</p>
-          <p className="text-sm">© 2026 TechFix Solutions. Todos los derechos reservados.</p>
+          <p className="text-sm">© 2026 Click & Fix. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
