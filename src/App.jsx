@@ -54,7 +54,7 @@ const services = [
       "Refacciones (ventiladores rotos)",
       "Formateo (servicio de software)"
     ],
-    conditions: "Servicio disponible solo Fines de Semana. Respalda tu información antes."
+    conditions: "Servicio disponible solo fines de semana. Respalda tu información antes."
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ const services = [
       "Reinstalación de programas pesados (Juegos, AutoCAD)",
       "Respaldo masivo (+20GB costo extra)"
     ],
-    conditions: "Servicio disponible solo Fines de Semana. Se entrega el disco viejo en tu mano."
+    conditions: "Servicio disponible solo fines de semana. Se entrega el disco viejo en tu mano."
   },
   {
     id: 4,
@@ -97,7 +97,7 @@ const services = [
       "Costo de la Memoria RAM",
       "Reparación de slots dañados"
     ],
-    conditions: "Servicio disponible solo Fines de Semana. Necesito modelo exacto para cotizar pieza."
+    conditions: "Servicio disponible solo fines de semana. Necesito modelo exacto para cotizar pieza."
   },
   {
     id: 5,
@@ -117,7 +117,7 @@ const services = [
       "Instalación de cableado",
       "Reparación de fallas del proveedor (Telmex/Izzi)"
     ],
-    conditions: "Servicio a domicilio (Fines de Semana). Debes tener acceso físico al módem."
+    conditions: "Servicio a domicilio (fines de semana). Debes tener acceso físico al módem."
   }
 ];
 
