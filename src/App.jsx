@@ -6,8 +6,8 @@ import { Monitor, Cpu, Wifi, HardDrive, Wrench, CheckCircle2, XCircle, AlertTria
    CONFIGURACIÓN GENERAL
    Cambia el nombre de tu negocio aquí abajo 👇
    ======================================== */
-const businessName = "TechFix Solutions"; 
-const phoneNumber = "525512345678"; // Tu número de WhatsApp
+const businessName = "Click & Fix"; 
+const phoneNumber = "525565397857"; // Tu número de WhatsApp
 
 /* ========================================
   BASE DE DATOS DE SERVICIOS
