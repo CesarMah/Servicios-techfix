@@ -188,7 +188,7 @@ export default function App() {
             {/* Logo y Nombre */}
             <div className="flex items-center space-x-2 font-bold text-xl tracking-tight">
               <Cpu className="text-blue-400" />
-              <span>Click<span className="text-blue-400">&</span> Fix</span>
+              <span>Click<span className="text-blue-400"> & </span>Fix</span>
             </div>
             
             {/* Menú de Escritorio (oculto en móviles 'hidden md:flex') */}
