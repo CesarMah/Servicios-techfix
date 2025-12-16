@@ -127,7 +127,7 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // IMPORTANTE: Cambia este número por tu número real
-  const phoneNumber = "525512345678"; 
+  const phoneNumber = "525565397857"; 
 
   const handleCopy = () => {
     navigator.clipboard.writeText(copyText);
