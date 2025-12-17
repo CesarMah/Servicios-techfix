@@ -76,7 +76,7 @@ const services = [
       "Reinstalación de programas pesados (Juegos, AutoCAD)",
       "Respaldo masivo (+20GB costo extra)"
     ],
-    conditions: "Servicio disponible solo fines de semana. Se entrega el disco viejo en tu mano."
+    conditions: "Servicio disponible solo fines de semana.  Se entrega el disco viejo en tu mano."
   },
   {
     id: 4,
@@ -326,7 +326,7 @@ export default function App() {
                     <div className="border-t border-slate-100 pt-6">
                         <h4 className="font-bold text-lg text-slate-900 mb-1">Sábados y Domingos</h4>
                         <p className="text-blue-600 font-bold text-xl">Horario Flexible / Previa Cita</p>
-                        <p className="text-slate-500 text-sm">Dedicado a Mantenimiento Físico, Hardware y Reparaciones que requieren taller.</p>
+                        <p className="text-slate-500 text-sm">Dedicado a Mantenimiento Físico, o Cambio de Componentes.</p>
                     </div>
                 </div>
             </div>
