@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// Iconos
-import { Monitor, Cpu, Wifi, HardDrive, Wrench, CheckCircle2, XCircle, AlertTriangle, Copy, Check, MessageCircle, Menu, X, Clock, Key } from 'lucide-react';
+// Iconos (Agregamos ChevronDown y ChevronUp para el menú desplegable, y Package para software)
+import { Monitor, Cpu, Wifi, HardDrive, Wrench, CheckCircle2, XCircle, AlertTriangle, Copy, Check, MessageCircle, Menu, X, Clock, Key, Package, ChevronDown, ChevronUp } from 'lucide-react';
 
 /* ========================================
    CONFIGURACIÓN GENERAL
@@ -58,49 +58,34 @@ const services = [
   },
   {
     id: 3,
-    category: "UPGRADE DISCO DURO",
-    title: "El Renacimiento: Cambio a SSD",
-    subtitle: "Velocidad Extrema (10x más rápido)",
-    price: 600,
-    priceNote: "+ costo de la pieza",
-    description: "Hacemos que tu computadora vuele. El precio es por mano de obra.",
+    category: "UPGRADES (Hardware)",
+    title: "Mejora de Rendimiento Extremo",
+    subtitle: "SSD & Memoria RAM",
+    // Al ser varios precios, usamos texto en lugar de un número fijo
+    price: "Desde $300", 
+    priceNote: "+ costo de piezas",
+    description: "Hacemos que tu computadora vuele y abra mil ventanas sin trabarse. Instalación de componentes clave para revivir tu equipo.",
     icon: <HardDrive className="w-8 h-8 text-purple-500" />,
     includes: [
-      "Instalación física del nuevo disco",
-      "Instalación limpia de Windows 10/11",
-      "Paquetería Básica (Office, PDF, Antivirus)",
-      "Respaldo de archivos hasta 20GB"
+      "Asesoría para comprar las piezas correctas",
+      "Instalación física profesional",
+      "Instalación limpia de Windows (solo aplica en SSD)",
+      "Pruebas de estabilidad y rendimiento"
     ],
     excludes: [
-      "Costo del Disco SSD",
-      "Reinstalación de programas pesados (Juegos, AutoCAD)",
-      "Respaldo masivo (+20GB costo extra)"
+      "Costo de las piezas (SSD/RAM)",
+      "Recuperación de datos o reparación de hardware roto"
     ],
-    conditions: "Servicio disponible solo Fines de Semana. Se entrega el disco viejo en tu mano."
+    conditions: "Servicio exclusivo Fines de Semana. Necesito modelo exacto para cotizar compatibilidad.",
+    // Aquí le decimos al código que esta tarjeta tiene sub-opciones
+    hasOptions: true,
+    options: [
+      { title: "El Renacimiento: Cambio a SSD", price: "600" },
+      { title: "Aumento de Velocidad: RAM", price: "300" }
+    ]
   },
   {
     id: 4,
-    category: "UPGRADE RAM",
-    title: "Aumento de Velocidad: RAM",
-    subtitle: "Multitarea fluida",
-    price: 300,
-    priceNote: "+ costo de la pieza",
-    description: "¿Se traba al abrir muchas ventanas? Le falta memoria RAM. Precio por mano de obra.",
-    icon: <Cpu className="w-8 h-8 text-orange-500" />,
-    includes: [
-      "Asesoría para comprar la RAM correcta",
-      "Instalación física de la memoria",
-      "Verificación en BIOS y Sistema",
-      "Prueba de estabilidad"
-    ],
-    excludes: [
-      "Costo de la Memoria RAM",
-      "Reparación de slots dañados"
-    ],
-    conditions: "Servicio disponible solo Fines de Semana. Necesito modelo exacto para cotizar pieza."
-  },
-  {
-    id: 5,
     category: "REDES",
     title: "Configuración y Seguridad Wi-Fi",
     subtitle: "Anti-Intrusos",
@@ -120,40 +105,62 @@ const services = [
     conditions: "Servicio a domicilio (Fines de Semana). Debes tener acceso físico al módem."
   },
   {
-    id: 6,
-    category: "SOFTWARE Y LICENCIAS",
-    title: "Instalación de Software y Activación",
-    subtitle: "Windows, Office 2021 y Paquetería",
+    id: 5,
+    category: "LICENCIAS",
+    title: "Activación de Windows y Office",
+    subtitle: "Licencias Originales",
     price: 250,
     priceNote: "+ costo de licencia",
-    description: "Instalación profesional de paquetería básica, Office y activación de tu sistema operativo.",
+    description: "Activación legal de tu sistema operativo y paquetería de Office para evitar bloqueos.",
     icon: <Key className="w-8 h-8 text-amber-500" />,
     includes: [
-      "Instalación de Microsoft Office (2021/365)",
-      "Activación o actualización de Windows 10/11",
-      "Instalación de utilidades (Lectores PDF, WinRAR, etc.)",
-      "Asesoría para compra de licencias originales a buen precio"
+      "Activación de Windows 10/11",
+      "Activación de Microsoft Office (2021/365)",
+      "Asesoría para comprar la clave correcta",
+      "Eliminación de mensajes de 'Windows no original'"
     ],
     excludes: [
-      "Costo de la licencia original (se cotiza aparte)",
-      "Recuperación de cuentas de correo bloqueadas",
-      "Instalación de programas pesados (AutoCAD, Adobe)"
+      "Costo de la licencia original",
+      "Instalación de los programas desde cero (es otro servicio)",
+      "Recuperación de cuentas Microsoft perdidas"
     ],
-    conditions: "Servicio compatible con Soporte Remoto (Lun-Vie de 8pm a 10pm). Las licencias son permanentes o de suscripción según lo que elijas."
+    conditions: "Servicio rápido compatible con Soporte Remoto (Lun-Vie de 8pm a 10pm)."
+  },
+  {
+    id: 6,
+    category: "SOFTWARE",
+    title: "Instalación de Programas",
+    subtitle: "Office, PDF y Utilerías",
+    price: 200,
+    description: "Instalación profesional de los programas que necesitas para trabajar o estudiar.",
+    icon: <Package className="w-8 h-8 text-indigo-500" />,
+    includes: [
+      "Instalación limpia de Microsoft Office (2021/365)",
+      "Instalación de utilidades (Lectores PDF, WinRAR, Chrome)",
+      "Configuración inicial de los programas",
+      "Desinstalación de versiones viejas o corruptas"
+    ],
+    excludes: [
+      "Costo de licencias (si el programa es de pago)",
+      "Programas de diseño pesado (AutoCAD, Adobe se cotizan aparte)"
+    ],
+    conditions: "Servicio compatible con Soporte Remoto (Lun-Vie de 8pm a 10pm)."
   }
 ];
 
-// Texto actualizado con los nuevos horarios
+// Texto actualizado para WhatsApp
 const copyText = `¡Hola! Reactivo mis servicios de Soporte Técnico en ${businessName} 🚀
 
 Si tu compu te está dando lata, aquí te dejo mi lista de servicios:
 
 💻 Soporte Remoto ($350): Limpieza y optimización sin salir de casa.
 🧹 Mantenimiento Físico ($500): Limpieza profunda y pasta térmica.
-🚀 Cambio a SSD ($600 + pieza): Hago que tu laptop vieja vuele.
-⚡ Aumento de RAM ($300 + pieza): Para multitarea fluida.
+⚙️ Upgrades de Hardware (+ pieza):
+  🚀 Cambio a SSD ($600): Hago que tu laptop vieja vuele.
+  ⚡ Aumento de RAM ($300): Para multitarea fluida.
 📡 Seguridad Wi-Fi ($250): Protege tu red de intrusos.
-🔑 Software y Licencias ($250 + lic): Instalación de Office 2021 y Windows.
+🔑 Activación de Licencias ($250 + lic): Para Windows y Office.
+📦 Instalación de Programas ($200): Office, PDF, Antivirus y más.
 
 🕒 HORARIOS DE ATENCIÓN:
 • Lunes a Viernes (8:00 PM - 10:00 PM): Exclusivo Soporte Remoto 👨‍💻
@@ -164,6 +171,8 @@ Si tu compu te está dando lata, aquí te dejo mi lista de servicios:
 export default function App() {
   const [copied, setCopied] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // Nuevo estado para controlar qué tarjeta está expandida (mostrando más info)
+  const [expandedCardId, setExpandedCardId] = useState(null);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(copyText);
@@ -176,6 +185,15 @@ export default function App() {
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
+  // Función para abrir/cerrar el menú de opciones dentro de una tarjeta
+  const toggleCard = (id) => {
+    if (expandedCardId === id) {
+      setExpandedCardId(null); // Si ya está abierto, ciérralo
+    } else {
+      setExpandedCardId(id); // Si está cerrado, ábrelo
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
       
@@ -185,7 +203,6 @@ export default function App() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2 font-bold text-xl tracking-tight">
               <Cpu className="text-blue-400" />
-              {/* Nombre del negocio dinámico */}
               <span>{businessName}</span>
             </div>
             
@@ -268,7 +285,10 @@ export default function App() {
                     {service.icon}
                   </div>
                   <div className="text-right">
-                    <span className="block text-2xl font-bold text-slate-800">${service.price}</span>
+                    {/* Verificamos si es número para ponerle el signo $, si es texto lo dejamos tal cual (ej. "Desde $300") */}
+                    <span className="block text-2xl font-bold text-slate-800">
+                      {typeof service.price === 'number' ? `$${service.price}` : service.price}
+                    </span>
                     {service.priceNote && <span className="text-xs text-slate-500 font-medium">{service.priceNote}</span>}
                   </div>
                 </div>
@@ -318,20 +338,53 @@ export default function App() {
               </div>
 
               <div className="p-4 bg-slate-50 border-t border-slate-100">
-                <button 
-                  onClick={() => handleWhatsAppClick(service.title)}
-                  className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 rounded-lg transition flex justify-center items-center gap-2"
-                >
-                  <MessageCircle size={18} />
-                  Agendar este servicio
-                </button>
+                {/* LÓGICA DE BOTONES CONDICIONAL */}
+                {service.hasOptions ? (
+                  // Si tiene sub-opciones, mostramos el menú desplegable
+                  <div className="flex flex-col gap-2">
+                    <button 
+                      onClick={() => toggleCard(service.id)}
+                      className="w-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-medium py-2 rounded-lg transition flex justify-center items-center gap-2"
+                    >
+                      Más información
+                      {expandedCardId === service.id ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                    </button>
+                    
+                    {/* Solo muestra estos botones si esta tarjeta fue la seleccionada */}
+                    {expandedCardId === service.id && (
+                      <div className="mt-2 flex flex-col gap-2 transition-all duration-300">
+                        {service.options.map(opt => (
+                          <button
+                            key={opt.title}
+                            onClick={() => handleWhatsAppClick(opt.title)}
+                            className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-4 rounded-lg transition flex justify-between items-center text-sm group"
+                          >
+                            <span>{opt.title}</span>
+                            <span className="bg-slate-700 group-hover:bg-blue-600 transition px-2 py-1 rounded text-xs font-bold">
+                              ${opt.price}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  // Si NO tiene sub-opciones, mostramos el botón clásico
+                  <button 
+                    onClick={() => handleWhatsAppClick(service.title)}
+                    className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 rounded-lg transition flex justify-center items-center gap-2"
+                  >
+                    <MessageCircle size={18} />
+                    Agendar este servicio
+                  </button>
+                )}
               </div>
             </div>
           ))}
         </div>
       </main>
 
-      {/* Nueva Sección de Horarios Visual */}
+      {/* Sección de Horarios */}
       <section id="horarios" className="bg-slate-100 py-16 px-4">
         <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
