@@ -7,7 +7,7 @@ import { Monitor, Cpu, Wifi, HardDrive, Wrench, CheckCircle2, XCircle, AlertTria
    Cambia el nombre de tu negocio aquí abajo 👇
    ======================================== */
 const businessName = "TechFix Solutions"; 
-const phoneNumber = "525512345678"; // Tu número de WhatsApp
+const phoneNumber = "525656511329"; // Tu número de WhatsApp
 
 /* ========================================
   BASE DE DATOS DE SERVICIOS
@@ -88,7 +88,7 @@ const services = [
   {
     id: 4,
     category: "REDES",
-    title: "Configuración y Seguridad Wi-Fi",
+    title: "Configuración y Seguridad WiFi",
     subtitle: "Anti-Intrusos",
     price: 250,
     description: "¿Internet lento o sospechas que te roban la señal? Asegura tu red doméstica.",
@@ -116,8 +116,8 @@ const services = [
     icon: <Key className="w-8 h-8 text-amber-500" />,
     includes: [
       "Activación de Windows 10/11",
-      "Activación de Microsoft Office (2021/365)",
-      "Asesoría para adquirir la clave correcta",
+      "Activación de Microsoft Office (2021)",
+      "Licencia digital",
       "Eliminación de marcas de agua o mensajes de 'Windows no original'"
     ],
     excludes: [
@@ -136,7 +136,7 @@ const services = [
     description: "Instalación de herramientas de ofimática (como Office) y utilerías necesarias para el uso cotidiano de tu equipo.",
     icon: <Package className="w-8 h-8 text-indigo-500" />,
     includes: [
-      "Instalación de Microsoft Office (2021/365)",
+      "Instalación de Microsoft Office (2021)",
       "Instalación de utilerías básicas (Lectores PDF, WinRAR, Navegadores)",
       "Configuración inicial de los programas instalados",
       "Desinstalación de versiones anteriores conflictivas"
