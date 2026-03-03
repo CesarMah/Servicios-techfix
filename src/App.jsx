@@ -19,12 +19,12 @@ const services = [
     title: "Diagnóstico y Optimización Remota",
     subtitle: "Vía RustDesk",
     price: 350,
-    description: "¿Tu PC está lenta? Me conecto de forma segura para dejarla como nueva sin que salgas de casa.",
+    description: "¿Tu PC está lenta? Me conecto de forma segura para realizar ajustes en el sistema operativo sin que salgas de casa.",
     icon: <Monitor className="w-8 h-8 text-blue-500" />,
     includes: [
       "Conexión Segura vía RustDesk (Tú tienes el control)",
       "Limpieza de archivos basura y temporales",
-      "Optimización de inicio",
+      "Optimización de inicio del sistema",
       "Escaneo y eliminación de virus básicos",
       "Actualización de Drivers (Audio, Video, Wi-Fi)"
     ],
@@ -41,7 +41,7 @@ const services = [
     title: "Mantenimiento Físico Preventivo",
     subtitle: "Laptop / PC",
     price: 500,
-    description: "Ideal si tu equipo se calienta mucho, hace ruido o está muy sucio. Evita daños mayores.",
+    description: "Ideal si tu equipo se calienta mucho, hace ruido o está muy sucio. Evita daños mayores a los componentes.",
     icon: <Wrench className="w-8 h-8 text-green-500" />,
     includes: [
       "Limpieza interna profunda (ventiladores, placa)",
@@ -54,34 +54,35 @@ const services = [
       "Refacciones (ventiladores rotos)",
       "Formateo (servicio de software)"
     ],
-    conditions: "Servicio disponible solo Fines de Semana. Respalda tu información antes."
+    conditions: "Servicio disponible solo Fines de Semana. Respalda tu información antes de entregar el equipo."
   },
   {
     id: 3,
     category: "UPGRADES (Hardware)",
-    title: "Mejora de Rendimiento Extremo",
-    subtitle: "SSD & Memoria RAM",
+    title: "Mejora de Rendimiento",
+    subtitle: "Disco Sólido (SSD), Memoria RAM u otros",
     // Al ser varios precios, usamos texto en lugar de un número fijo
     price: "Desde $300", 
     priceNote: "+ costo de piezas",
-    description: "Hacemos que tu computadora vuele y abra mil ventanas sin trabarse. Instalación de componentes clave para revivir tu equipo.",
+    description: "Actualización de componentes físicos para optimizar los tiempos de carga y la capacidad de respuesta de tu equipo.",
     icon: <HardDrive className="w-8 h-8 text-purple-500" />,
     includes: [
-      "Asesoría para comprar las piezas correctas",
-      "Instalación física profesional",
-      "Instalación limpia de Windows (solo aplica en SSD)",
-      "Pruebas de estabilidad y rendimiento"
+      "Asesoría para comprar las piezas correctas y compatibles",
+      "Instalación física profesional del componente",
+      "Instalación limpia de Windows (aplica al cambiar disco de almacenamiento)",
+      "Pruebas de reconocimiento en el sistema"
     ],
     excludes: [
-      "Costo de las piezas (SSD/RAM)",
-      "Recuperación de datos o reparación de hardware roto"
+      "Costo de las refacciones (SSD, RAM, etc.)",
+      "Recuperación de datos de discos dañados",
+      "Mejora de rendimiento en juegos pesados (depende de la tarjeta gráfica)"
     ],
-    conditions: "Servicio exclusivo Fines de Semana. Necesito modelo exacto para cotizar compatibilidad.",
+    conditions: "Servicio exclusivo Fines de Semana. Necesito modelo exacto para verificar compatibilidad antes de cotizar.",
     // Aquí le decimos al código que esta tarjeta tiene sub-opciones
     hasOptions: true,
     options: [
-      { title: "El Renacimiento: Cambio a SSD", price: "600" },
-      { title: "Aumento de Velocidad: RAM", price: "300" }
+      { title: "Cambio a Disco Sólido (SSD)", price: "600" },
+      { title: "Aumento de Memoria RAM", price: "300" }
     ]
   },
   {
@@ -100,49 +101,50 @@ const services = [
     ],
     excludes: [
       "Instalación de cableado",
-      "Reparación de fallas del proveedor (Telmex/Izzi)"
+      "Reparación de fallas físicas del proveedor (Telmex/Izzi)"
     ],
     conditions: "Servicio a domicilio (Fines de Semana). Debes tener acceso físico al módem."
   },
   {
     id: 5,
     category: "LICENCIAS",
-    title: "Activación de Windows y Office",
-    subtitle: "Licencias Originales",
+    title: "Activación de Windows u Office",
+    subtitle: "Sistemas y Ofimática",
     price: 250,
     priceNote: "+ costo de licencia",
-    description: "Activación legal de tu sistema operativo y paquetería de Office para evitar bloqueos.",
+    description: "Servicio de activación para tu sistema operativo Windows o paquetería de Office para mantenerlos funcionales y sin bloqueos.",
     icon: <Key className="w-8 h-8 text-amber-500" />,
     includes: [
       "Activación de Windows 10/11",
       "Activación de Microsoft Office (2021/365)",
-      "Asesoría para comprar la clave correcta",
-      "Eliminación de mensajes de 'Windows no original'"
+      "Asesoría para adquirir la clave correcta",
+      "Eliminación de marcas de agua o mensajes de 'Windows no original'"
     ],
     excludes: [
-      "Costo de la licencia original",
-      "Instalación de los programas desde cero (es otro servicio)",
-      "Recuperación de cuentas Microsoft perdidas"
+      "Costo de la licencia (se cotiza según la versión)",
+      "Instalación de los programas desde cero (se cotiza como instalación de software)",
+      "Recuperación de cuentas Microsoft"
     ],
     conditions: "Servicio rápido compatible con Soporte Remoto (Lun-Vie de 8pm a 10pm)."
   },
   {
     id: 6,
     category: "SOFTWARE",
-    title: "Instalación de Programas",
-    subtitle: "Office, PDF y Utilerías",
+    title: "Instalación de Ofimática y Utilerías",
+    subtitle: "Programas básicos de oficina",
     price: 200,
-    description: "Instalación profesional de los programas que necesitas para trabajar o estudiar.",
+    description: "Instalación de herramientas de ofimática (como Office) y utilerías necesarias para el uso cotidiano de tu equipo.",
     icon: <Package className="w-8 h-8 text-indigo-500" />,
     includes: [
-      "Instalación limpia de Microsoft Office (2021/365)",
-      "Instalación de utilidades (Lectores PDF, WinRAR, Chrome)",
-      "Configuración inicial de los programas",
-      "Desinstalación de versiones viejas o corruptas"
+      "Instalación de Microsoft Office (2021/365)",
+      "Instalación de utilerías básicas (Lectores PDF, WinRAR, Navegadores)",
+      "Configuración inicial de los programas instalados",
+      "Desinstalación de versiones anteriores conflictivas"
     ],
     excludes: [
       "Costo de licencias (si el programa es de pago)",
-      "Programas de diseño pesado (AutoCAD, Adobe se cotizan aparte)"
+      "Programas de diseño, arquitectura o especializados (AutoCAD, Adobe, etc. se cotizan aparte)",
+      "Instalación de software no acordado previamente"
     ],
     conditions: "Servicio compatible con Soporte Remoto (Lun-Vie de 8pm a 10pm)."
   }
@@ -153,14 +155,14 @@ const copyText = `¡Hola! Reactivo mis servicios de Soporte Técnico en ${busine
 
 Si tu compu te está dando lata, aquí te dejo mi lista de servicios:
 
-💻 Soporte Remoto ($350): Limpieza y optimización sin salir de casa.
+💻 Soporte Remoto ($350): Limpieza y optimización del sistema.
 🧹 Mantenimiento Físico ($500): Limpieza profunda y pasta térmica.
-⚙️ Upgrades de Hardware (+ pieza):
-  🚀 Cambio a SSD ($600): Hago que tu laptop vieja vuele.
-  ⚡ Aumento de RAM ($300): Para multitarea fluida.
+⚙️ Upgrades de Hardware (+ piezas):
+  🚀 Cambio a SSD ($600): Mejora los tiempos de carga del sistema.
+  ⚡ Aumento de RAM ($300): Optimiza el uso de varios programas a la vez.
 📡 Seguridad Wi-Fi ($250): Protege tu red de intrusos.
-🔑 Activación de Licencias ($250 + lic): Para Windows y Office.
-📦 Instalación de Programas ($200): Office, PDF, Antivirus y más.
+🔑 Activación de Licencias ($250 + lic): Activación de Windows u Office.
+📦 Instalación de Ofimática ($200): Office, lectores PDF y utilerías.
 
 🕒 HORARIOS DE ATENCIÓN:
 • Lunes a Viernes (8:00 PM - 10:00 PM): Exclusivo Soporte Remoto 👨‍💻
