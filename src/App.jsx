@@ -17,7 +17,7 @@ const services = [
     id: 1,
     category: "SOPORTE REMOTO (Software)",
     title: "Diagnóstico y Optimización Remota",
-    subtitle: "Vía RustDesk",
+    subtitle: "Vía RustDesk o AnyDesk",
     price: 350,
     description: "¿Tu PC está lenta? Me conecto de forma segura para realizar ajustes en el sistema operativo sin que salgas de casa.",
     icon: <Monitor className="w-8 h-8 text-blue-500" />,
