@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 // Iconos
-import { Monitor, Cpu, Wifi, HardDrive, Wrench, CheckCircle2, XCircle, AlertTriangle, Copy, Check, MessageCircle, Menu, X, Clock } from 'lucide-react';
+import { Monitor, Cpu, Wifi, HardDrive, Wrench, CheckCircle2, XCircle, AlertTriangle, Copy, Check, MessageCircle, Menu, X, Clock, Key } from 'lucide-react';
 
 /* ========================================
    CONFIGURACIÓN GENERAL
    Cambia el nombre de tu negocio aquí abajo 👇
    ======================================== */
-const businessName = "Click & Fix"; 
-const phoneNumber = "525565397857"; // Tu número de WhatsApp
+const businessName = "TechFix Solutions"; 
+const phoneNumber = "525512345678"; // Tu número de WhatsApp
 
 /* ========================================
   BASE DE DATOS DE SERVICIOS
@@ -54,7 +54,7 @@ const services = [
       "Refacciones (ventiladores rotos)",
       "Formateo (servicio de software)"
     ],
-    conditions: "Servicio disponible solo fines de semana. Respalda tu información antes."
+    conditions: "Servicio disponible solo Fines de Semana. Respalda tu información antes."
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ const services = [
       "Reinstalación de programas pesados (Juegos, AutoCAD)",
       "Respaldo masivo (+20GB costo extra)"
     ],
-    conditions: "Servicio disponible solo fines de semana.  Se entrega el disco viejo en tu mano."
+    conditions: "Servicio disponible solo Fines de Semana. Se entrega el disco viejo en tu mano."
   },
   {
     id: 4,
@@ -97,7 +97,7 @@ const services = [
       "Costo de la Memoria RAM",
       "Reparación de slots dañados"
     ],
-    conditions: "Servicio disponible solo fines de semana. Necesito modelo exacto para cotizar pieza."
+    conditions: "Servicio disponible solo Fines de Semana. Necesito modelo exacto para cotizar pieza."
   },
   {
     id: 5,
@@ -117,7 +117,29 @@ const services = [
       "Instalación de cableado",
       "Reparación de fallas del proveedor (Telmex/Izzi)"
     ],
-    conditions: "Servicio a domicilio (fines de semana). Debes tener acceso físico al módem."
+    conditions: "Servicio a domicilio (Fines de Semana). Debes tener acceso físico al módem."
+  },
+  {
+    id: 6,
+    category: "SOFTWARE Y LICENCIAS",
+    title: "Instalación de Software y Activación",
+    subtitle: "Windows, Office 2021 y Paquetería",
+    price: 250,
+    priceNote: "+ costo de licencia",
+    description: "Instalación profesional de paquetería básica, Office y activación de tu sistema operativo.",
+    icon: <Key className="w-8 h-8 text-amber-500" />,
+    includes: [
+      "Instalación de Microsoft Office (2021/365)",
+      "Activación o actualización de Windows 10/11",
+      "Instalación de utilidades (Lectores PDF, WinRAR, etc.)",
+      "Asesoría para compra de licencias originales a buen precio"
+    ],
+    excludes: [
+      "Costo de la licencia original (se cotiza aparte)",
+      "Recuperación de cuentas de correo bloqueadas",
+      "Instalación de programas pesados (AutoCAD, Adobe)"
+    ],
+    conditions: "Servicio compatible con Soporte Remoto (Lun-Vie de 8pm a 10pm). Las licencias son permanentes o de suscripción según lo que elijas."
   }
 ];
 
@@ -131,6 +153,7 @@ Si tu compu te está dando lata, aquí te dejo mi lista de servicios:
 🚀 Cambio a SSD ($600 + pieza): Hago que tu laptop vieja vuele.
 ⚡ Aumento de RAM ($300 + pieza): Para multitarea fluida.
 📡 Seguridad Wi-Fi ($250): Protege tu red de intrusos.
+🔑 Software y Licencias ($250 + lic): Instalación de Office 2021 y Windows.
 
 🕒 HORARIOS DE ATENCIÓN:
 • Lunes a Viernes (8:00 PM - 10:00 PM): Exclusivo Soporte Remoto 👨‍💻
@@ -326,7 +349,7 @@ export default function App() {
                     <div className="border-t border-slate-100 pt-6">
                         <h4 className="font-bold text-lg text-slate-900 mb-1">Sábados y Domingos</h4>
                         <p className="text-blue-600 font-bold text-xl">Horario Flexible / Previa Cita</p>
-                        <p className="text-slate-500 text-sm">Dedicado a Mantenimiento Físico, o Cambio de Componentes.</p>
+                        <p className="text-slate-500 text-sm">Dedicado a Mantenimiento Físico, Hardware y Reparaciones que requieren taller.</p>
                     </div>
                 </div>
             </div>
