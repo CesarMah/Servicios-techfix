@@ -116,7 +116,7 @@ const services = [
     icon: <Key className="w-8 h-8 text-amber-500" />,
     includes: [
       "Activación de Windows 10/11",
-      "Activación de Microsoft Office (2021)",
+      "Activación de Microsoft Office",
       "Licencia digital",
       "Eliminación de marcas de agua o mensajes de 'Windows no original'"
     ],
