@@ -110,7 +110,7 @@ const services = [
     category: "LICENCIAS",
     title: "Activación de Windows u Office",
     subtitle: "Sistemas y Ofimática",
-    price: 250,
+    price: 100,
     priceNote: "+ costo de licencia",
     description: "Servicio de activación para tu sistema operativo Windows o paquetería de Office para mantenerlos funcionales y sin bloqueos.",
     icon: <Key className="w-8 h-8 text-amber-500" />,
@@ -132,7 +132,7 @@ const services = [
     category: "SOFTWARE",
     title: "Instalación de Ofimática y Utilerías",
     subtitle: "Programas básicos de oficina",
-    price: 200,
+    price: 250,
     description: "Instalación de herramientas de ofimática (como Office) y utilerías necesarias para el uso cotidiano de tu equipo.",
     icon: <Package className="w-8 h-8 text-indigo-500" />,
     includes: [
