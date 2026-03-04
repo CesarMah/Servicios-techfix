@@ -111,7 +111,7 @@ const services = [
     title: "Activación de Windows u Office",
     subtitle: "Sistemas y Ofimática",
     price: 100,
-    priceNote: "+ costo de licencia",
+    priceNote: "Licencia OEM",
     description: "Servicio de activación para tu sistema operativo Windows o paquetería de Office para mantenerlos funcionales y sin bloqueos.",
     icon: <Key className="w-8 h-8 text-amber-500" />,
     includes: [
